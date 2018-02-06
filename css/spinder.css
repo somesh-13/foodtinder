@@ -1,0 +1,316 @@
+
+       .activeState{ 
+           background-color:#ffffff;
+           color:red  !important;
+       }
+       .topMenu{
+           text-align: center;
+       }
+       .titleColor, .titleColor:hover, .titleColor:active, .titleColor:visited, .titleColor:focus {
+        text-decoration:none;
+        }
+       .topMenu a{
+           color :#000;
+           font-weight: 800;
+       }
+       .foodName {
+    padding: 15px 15px 0 15px;
+    font-size: 25px;
+    background: #fff;
+}
+       .containerApp {
+           background: #ffffff;
+    width: 380px;
+    border: 1px solid #fafafa;
+    height:560px;
+    margin: 5px auto;
+}
+body{
+    background:red;
+}
+#likeButton {
+    width: 46px;
+    margin: 5px auto;
+    background: #f00;
+    height: 46px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+#rejectButton {
+    width: 46px;
+    margin:  5px auto;
+    background: #f00;
+    height: 46px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.mainContent {
+    padding: 30px 0 0 0px;
+}
+.titleColor {
+    font-family: Verdana;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 0 10px;
+}
+.imageClass{
+    max-width: 380px;
+height: 330px;
+}
+.iconsSize{
+    width: 35px;
+margin: 5px 0 0 5px;
+}
+.likeImage{
+    position: relative;
+}
+.footer {
+    padding-bottom: 40px;
+    margin-top: 0;
+}
+.foodQuestion {
+    font-size:20px;
+    background: #fff;
+    font-weight: 800;
+    margin: 320px 15px 0 15px;
+}
+.meta p{
+    font-weight: 800;
+}
+.tableWidth{
+    width: 175px;
+}
+#matchedFood {
+font-size: 22px;
+font-weight: 800;
+}
+#healthyMatched {
+font-size: 20px;
+color: #30ff30;
+font-weight: 800;
+}
+#unhealthyMatched {
+font-size: 20px;
+color: red;
+}
+#NotMatched{
+font-size: 22px;
+font-weight: 800;
+}
+#healthyNotMatched{
+font-size: 20px;
+color: #30ff30;
+font-weight: 800;
+}
+#unhealthyNotMatched{
+    font-size: 20px;
+color: red;
+}
+
+  #container:before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50px;
+    height: 50px;
+    background: #262626;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    color: #EBEAE8;
+  }
+  
+  #container {
+    position: absolute;
+    margin: auto;
+    top: 420px; left: 0; right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  #container > a {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #3A3A3A;
+    -webkit-transition: top 1s, left .5s;
+    -moz-transition: top 1s, left .5s;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    color: #EBEAE8;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .foodNameOnimage {
+    position: absolute;
+    left: 20px;
+    bottom: -70px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #000;
+    z-index: 100000;
+}
+  .iconsColor{
+      background: red !important;
+  }
+  .entypo-menu{
+    background: red !important;   
+  }
+  .IconsText {
+    color: #000;
+    position: absolute;
+    top: 70px;
+    line-height: 1.5;
+    left: 0;
+    display: none;
+    font-weight: 800;
+}
+.bounce {
+    position:fixed;
+    left:50%;
+    bottom:0;
+    margin-top:-25px;
+    margin-left:-25px;
+    height:50px;
+    width:50px;
+    -webkit-animation:bounce 1s infinite;
+  }
+  @-webkit-keyframes bounce {
+    0%       { bottom:5px; }
+    25%, 75% { bottom:15px; }
+    50%      { bottom:20px; }
+    100%     {bottom:0;}
+  }
+
+  /*
+ * [?] START Slider
+ * *******************************************/
+._slider {
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+  }
+  ._slider:hover ._slider_next,
+  ._slider:hover ._slider_prev {
+    display: block;
+  }
+  ._slider_next, ._slider_prev {
+    position: absolute;
+    top: 35%;
+    z-index:1999;
+    display: none;
+    width: auto;
+    height: auto;
+    padding: 2% 4%;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 2em;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  ._slider_next:hover, ._slider_prev:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+  }
+  ._slider_next {
+    right: 0;
+  }
+  ._slider ul {
+    position: relative;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ._slider ul li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #ccc;
+    display: block;
+    width: 350px;
+    line-height: 300px;
+    text-align: center;
+  }
+
+  
+  /* *******************************************
+   * END Slider
+   * */
+   .CloseButton {
+    padding: 10px 65px;
+    border: 2px solid red;
+    background: red;
+    color: #fff;
+    font-weight: 600;
+    margin: 45px 0 0 80px !important;
+    border-radius: 6px;
+    position: absolute;
+    display: none;
+}
+.CloseButton:hover {
+    color: #fafafa;
+}
+.swipesPagealign {
+    padding: 0 0 0 50px;
+}
+.calculate{
+    padding: 10px 65px;
+    border: 2px solid red;
+    background: red;
+    color: #fff;
+    font-weight: 600;
+    margin: 45px 0 0 80px !important;
+    border-radius: 6px;
+    position: absolute;
+    display: none; 
+}
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .swipesPagealign {
+        padding: 0 0 0 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .containerApp{
+        width: auto;
+    }
+    .mainContent {
+        padding: 5px 0 0 0;
+    }
+    .containerApp{
+        height: 520px;
+        width: 320px;
+    }
+    ._slider ul li{
+        width:310px;
+    }
+    .IconsText {
+        position: absolute;
+        top: 65px;
+        line-height: 1.2;
+        left: -5px;
+        display: none;
+    }
+    ._slider{
+        margin-left:0;
+    }
+    .CloseButton{
+        margin: 45px 0 0 50px !important;
+    }
+    .calculate{
+        margin: 45px 0 0 60px !important;
+    }
+
+   
+}

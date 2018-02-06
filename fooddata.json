@@ -1,0 +1,5 @@
+fooditems= [
+    {id:1 , name :"egg" , url:"imageUrl",healthindex:88, question:"do you consider fish healthy to eat",matched:0,description:"fish is high in protien"},
+    {id:2 , name :"cake" , url:"imageUrl",healthindex:18, question:"do you consider cake healthy to eat",matched:0,description:"cake is high in carbs,sugar"},
+    {id:3 , name :"corn" , url:"imageUrl",healthindex:48, question:"do you consider corn healthy to eat",matched:0,description:"corn is high in carbs"},
+]
