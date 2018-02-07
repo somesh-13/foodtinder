@@ -112,18 +112,14 @@
 						});
 						var uniquecommonLiked= Array.from(new Set(commonLiked));
 						var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
-						//console.log(uniquecommonLiked); // returns liked elements ids
-						//console.log(uniquecommonDisLiked); // returns liked elements ids
+					
 						
 						for(var j=0;j<uniquecommonLiked.length;j++){
 							AllfoodItems[uniquecommonLiked[j]].name;
-							console.log(AllfoodItems[uniquecommonLiked[j]].name+" are the liked")
-							console.log(AllfoodItems[uniquecommonLiked[j]].url+" are the liked")
+			
 						}
 						for(var j=0;j<uniquecommonDisLiked.length;j++){
-						//	AllfoodItems[uniquecommonDisLiked[j]].name;
-							console.log(AllfoodItems[uniquecommonDisLiked[j]].name +" are the disliked")
-							console.log(AllfoodItems[uniquecommonDisLiked[j]].url +" are the disliked")
+	
 							
 						//	document.getElementById('matchedFood').innerHTML=AllfoodItems[uniquecommonDisLiked[j]].name;
 						}
