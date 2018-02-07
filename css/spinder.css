@@ -13,6 +13,7 @@
            color :#000;
            font-weight: 800;
        }
+
        .foodName {
     padding: 15px 15px 0 15px;
     font-size: 25px;
@@ -287,6 +288,7 @@ color: red;
     }
     .containerApp{
         width: auto;
+        position: fixed;
     }
     .mainContent {
         padding: 5px 0 0 0;
@@ -314,6 +316,9 @@ color: red;
     .calculate{
         margin: 45px 0 0 60px !important;
     }
-
+       .relativeDiv{
+          margin: 0 auto;
+          width: 320px;
+       }
    
 }
