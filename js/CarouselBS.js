@@ -219,7 +219,7 @@ var CarouselSlide= function() {
     function moveLeft() {
         $('._slider ul').animate({
             left: + slideWidth
-        }, 200, function () {
+        }, 800, function () {
             $('._slider ul li:last-child').prependTo('._slider ul');
             $('._slider ul').css('left', '');
         });
@@ -228,7 +228,7 @@ var CarouselSlide= function() {
     function moveRight() {
         $('._slider ul').animate({
             left: - slideWidth
-        }, 200, function () {
+        }, 800, function () {
             $('._slider ul li:first-child').appendTo('._slider ul');
             $('._slider ul').css('left', '');
         });
