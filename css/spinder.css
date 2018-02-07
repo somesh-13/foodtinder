@@ -27,7 +27,9 @@
 }
 body{
     background:red;
-    position: static;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
 }
 #likeButton {
     width: 46px;
