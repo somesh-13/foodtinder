@@ -54,7 +54,28 @@
 									,healthindex:17,question:"Are you habitual of eating pastry?",matched:"false",description:"Pastry contains a lot of sugar and will make you fat"},
 									{id:10,name:"Cakes",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/29.jpeg?alt=media&token=0d049eb2-5682-46fd-b292-fd7ee044f818"
 									,healthindex:15,question:"Do you eat big slices of cakes at a birthday?",matched:"false",description:"CAkes contains a lot of sugar and will make you fat"},
-
+									{id:11,name:"Barbeque chicken",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/barbequechicken.jpg?alt=media&token=009deb77-adac-4f00-9951-41e946a4b1b5"
+									,healthindex:82,question:"Are you fond of eating barbeque chicken",matched:"false",description:"chicken is lean source of protien"},
+									{id:12,name:"Barbeque mushrooms",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/barbequemushrooms.jpeg?alt=media&token=469269cb-cc85-421e-8e0c-d5b06fd0515d"
+									,healthindex:74,question:"Are you fond of eating barbeque mushrooms?",matched:"false",description:"Mushrooms are good source of protien"},
+									{id:13,name:"Dal tadka",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/DalTadka.jpeg?alt=media&token=10e79549-b751-4c4f-8f1f-1c9428c8a054"
+									,healthindex:68,question:"DO you like eating tasty Indian dal tadka?",matched:"false",description:"Dal has protien but carbs too"},
+									{id:14,name:"Egg Fried Rice",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/fried%20rice.jpeg?alt=media&token=5ad030b4-c0cd-488a-b555-9e020119e9ac"
+									,healthindex:"63",question:"Do you like Tasty Fried rice with omlette topping",matched:"false",description:"Rice has carbs and protien cant make for it too"},
+									{id:15,name:"Idli",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/idli.jpeg?alt=media&token=4011afe2-2fee-4488-a7b8-c7587faa4fff"
+									,healthindex:48,question:"Are you fond of eating south Indian idli?",matched:"false",description:"Idli has a lot of carbs"},
+									{id:16,name:"Masala Dosa",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/masaladosa.jpeg?alt=media&token=2e9c5d58-2e28-477e-b34a-0cf63559f61e"
+									,healthindex:25,question:"do you eat it this tasty dosa frequently?",matched:"false",description:"Dosa has carbs . maida and potatoes"},
+									{id:17,name:"McPuff MC'D",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/McVeggie%20MCdonalds.jpeg?alt=media&token=b0ce5509-d866-4153-b3c7-e43c98b6b0d9"
+									,healthindex:33,question:"MC Puff seems tasty, do you crave it?",matched:"false",description:"mcfpuff has carbs . maida and potatoes"},
+									{id:18,name:"mexican nachos",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/mexicannachos.jpg?alt=media&token=83ffa287-47e5-4854-90f3-d8e007e4c35b"
+									,healthindex:28,question:"do you eat it these nachos frequently?",matched:"false",description:"nachos has carbs . maida and potatoes"},
+									{id:19,name:"Mutton Curry",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/mutton%20curry.jpeg?alt=media&token=59b1b25d-3a59-4ef3-852f-940e957afe01"
+									,healthindex:82,question:"do you like eating mutton curry?",matched:"false",description:"Mutton curry has high protiens"},
+									{id:20,name:"pulao",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/pulao.jpg?alt=media&token=5f776510-e9a0-480f-8257-3467b797d562"
+									,healthindex:24,question:"do you like eating Indian Pulao?",matched:"false",description:"Pulao has high carbs"},
+									{id:21,name:"Salads",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/salads.jpg?alt=media&token=27b278d8-bc70-4fed-b4ce-8b883d9fd3a1"
+									,healthindex:77,question:"do you like eating salads?",matched:"false",description:"salads are good for healthy"}									
 								];  
 								
 								sessionStorage.setItem("fooditemsList", JSON.stringify(fooditems));
