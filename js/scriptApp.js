@@ -63,7 +63,7 @@
 									{id:14,name:"Egg Fried Rice",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/fried%20rice.jpeg?alt=media&token=5ad030b4-c0cd-488a-b555-9e020119e9ac"
 									,healthindex:"63",question:"Do you like Tasty Fried rice with omlette topping",matched:"false",description:"Rice has carbs and protien cant make for it too"},
 									{id:15,name:"Idli",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/idli.jpeg?alt=media&token=4011afe2-2fee-4488-a7b8-c7587faa4fff"
-									,healthindex:48,question:"Are you fond of eating south Indian idli?",matched:"false",description:"Idli has a lot of carbs"},
+									,healthindex:48,question:"Are you fond of eating idli ?",matched:"false",description:"Idli has a lot of carbs"},
 									{id:16,name:"Masala Dosa",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/masaladosa.jpeg?alt=media&token=2e9c5d58-2e28-477e-b34a-0cf63559f61e"
 									,healthindex:25,question:"do you eat it this tasty dosa frequently?",matched:"false",description:"Dosa has carbs . maida and potatoes"},
 									{id:17,name:"McPuff MC'D",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/McVeggie%20MCdonalds.jpeg?alt=media&token=b0ce5509-d866-4153-b3c7-e43c98b6b0d9"
