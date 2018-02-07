@@ -35,9 +35,7 @@ var inc=1;
 				foodquestion[i]=fooditems[i].question;
 
 			}
-			console.log(namesFood);
-			console.log(foodId);
-			console.log(foodImageURls);
+	
 			$("div#swipe_like").on( "click", function() {
 				swipeLike();
 			});	
