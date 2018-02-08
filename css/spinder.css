@@ -320,5 +320,7 @@ color: red;
           margin: 0 auto;
           width: 320px;
        }
-   
+       .footer{
+           padding-left: 50px;
+       }
 }
