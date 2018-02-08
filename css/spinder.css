@@ -307,6 +307,9 @@ color: red;
         left: -5px;
         display: none;
     }
+     .bannerAlign{
+        padding-left:4px;
+    }
     ._slider{
         margin-left:0;
     }
