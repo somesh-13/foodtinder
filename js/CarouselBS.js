@@ -69,30 +69,33 @@ var semiCircleMenu = function(){
 semiCircleMenu();
 
 //LOgic for semicircle menu creation ends here
-
 var foodItemsInfo = function( itemtype){ 
 if(($(".IconsText")[0].style.display=="block")){ 
     var AllFoodIds =[];
     $("#sliderID").css("display","block");
     var DislikedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodDisLikedArray"));
     var likedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodLikedArray"));
-    var likedFoodItemsIdsNumber=likedFoodItemsIds.map(Number);
-    var DislikedFoodItemsIdsNumber=DislikedFoodItemsIds.map(Number);
+    if(DislikedFoodItemsIds  && likedFoodItemsIds){
+        var likedFoodItemsIdsNumber=likedFoodItemsIds.map(Number);
+        var DislikedFoodItemsIdsNumber=DislikedFoodItemsIds.map(Number);  
+        var commonLiked = $.grep(likedFoodItemsIdsNumber, function(element) {
+            return $.inArray(element, AllFoodIds ) !== -1;
+        });
+        var commonDisLiked = $.grep(DislikedFoodItemsIdsNumber, function(element) {
+          return $.inArray(element, AllFoodIds ) !== -1;
+      });         
+        var uniquecommonLiked= Array.from(new Set(commonLiked));
+
+        var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
+    }
     var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
   //  var dummyfoodItems=JSON.parse(sessionStorage.getItem("dummyFoodItems"));
     
     for (var i=0;i<AllfoodItems.length;i++){
         AllFoodIds[i]=AllfoodItems[i].id;
     }
-    var commonLiked = $.grep(likedFoodItemsIdsNumber, function(element) {
-      return $.inArray(element, AllFoodIds ) !== -1;
-  });
-  var commonDisLiked = $.grep(DislikedFoodItemsIdsNumber, function(element) {
-    return $.inArray(element, AllFoodIds ) !== -1;
-});
-var uniquecommonLiked= Array.from(new Set(commonLiked));
 
-var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
+
   if(itemtype==healthyLiked){
       console.log("healthy liked food ")
       $("#sliderID").css("display","block");
@@ -102,19 +105,22 @@ var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
         console.log(dummyFoodItems[k].url +" is the dummy items url");
         $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+dummyFoodItems[k].url+'"><span class="foodNameOnimage">'+dummyFoodItems[k].name+'</span></span></a></li>');
      }    
+     if(uniquecommonLiked){
+        for(var j=0;j<uniquecommonLiked.length;j++){
+               
+            if(AllfoodItems[uniquecommonLiked[j]].healthindex>50){
+             console.log(AllfoodItems[uniquecommonLiked[j]].name+" are the healthy liked")
+             console.log(AllfoodItems[uniquecommonLiked[j]].url+" are the healthy liked")
+             console.log(AllfoodItems[uniquecommonLiked[j]].healthindex+" of  the  healthy liked")
+             
+             $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonLiked[j]].name+'</span></span></a></li>');
+            
+     }
+ }
 
-    for(var j=0;j<uniquecommonLiked.length;j++){
-               
-               if(AllfoodItems[uniquecommonLiked[j]].healthindex>50){
-                console.log(AllfoodItems[uniquecommonLiked[j]].name+" are the healthy liked")
-                console.log(AllfoodItems[uniquecommonLiked[j]].url+" are the healthy liked")
-                console.log(AllfoodItems[uniquecommonLiked[j]].healthindex+" of  the  healthy liked")
-                
-                $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonLiked[j]].name+'</span></span></a></li>');
-               
-        }
-    }
-    
+ }
+
+
     $(".CloseButton").css("display","block");
    
     CarouselSlide();
@@ -125,16 +131,19 @@ var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
         console.log(dummyFoodItems[k].url +" is the dummy items url");
         $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+dummyFoodItems[k].url+'"><span class="foodNameOnimage">'+dummyFoodItems[k].name+'</span></span></a></li>');
      }    
-    for(var j=0;j<uniquecommonLiked.length;j++){
+     if(uniquecommonLiked){
+        for(var j=0;j<uniquecommonLiked.length;j++){
        
-        if(AllfoodItems[uniquecommonLiked[j]].healthindex<50){
-         console.log(AllfoodItems[uniquecommonLiked[j]].name+" are the unhealthy liked")
-         console.log(AllfoodItems[uniquecommonLiked[j]].url+" are the  unhealthy liked")
-         console.log(AllfoodItems[uniquecommonLiked[j]].healthindex+" of  the  unhealthy liked")
-         $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonLiked[j]].name+'</span></span></a></li>');
-       
- }
-}
+            if(AllfoodItems[uniquecommonLiked[j]].healthindex<50){
+             console.log(AllfoodItems[uniquecommonLiked[j]].name+" are the unhealthy liked")
+             console.log(AllfoodItems[uniquecommonLiked[j]].url+" are the  unhealthy liked")
+             console.log(AllfoodItems[uniquecommonLiked[j]].healthindex+" of  the  unhealthy liked")
+             $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonLiked[j]].name+'</span></span></a></li>');
+           
+     }
+    }
+     }
+
 $(".CloseButton").css("display","block");
 CarouselSlide();
     }
@@ -144,6 +153,7 @@ else if(itemtype==HealthyDisliked){
         console.log(dummyFoodItems[k].url +" is the dummy items url");
         $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+dummyFoodItems[k].url+'"><span class="foodNameOnimage">'+dummyFoodItems[k].name+'</span></span></a></li>');
      } 
+   if(uniquecommonDisLiked){
     for(var j=0;j<uniquecommonDisLiked.length;j++){
         //	AllfoodItems[uniquecommonDisLiked[j]].name;
         if(AllfoodItems[uniquecommonDisLiked[j]].healthindex>50){
@@ -155,6 +165,8 @@ else if(itemtype==HealthyDisliked){
         } 
         //	document.getElementById('matchedFood').innerHTML=AllfoodItems[uniquecommonDisLiked[j]].name;
         }
+   }
+
         $(".CloseButton").css("display","block");
         CarouselSlide();
 }
@@ -164,27 +176,26 @@ else  if(itemtype==UnhealthyDisLiked){
         console.log(dummyFoodItems[k].url +" is the dummy items url");
         $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+dummyFoodItems[k].url+'"><span class="foodNameOnimage">'+dummyFoodItems[k].name+'</span></span></a></li>');
      } 
-    for(var j=0;j<uniquecommonDisLiked.length;j++){
-        //	AllfoodItems[uniquecommonDisLiked[j]].name;
-        if(AllfoodItems[uniquecommonDisLiked[j]].healthindex<50){
-            console.log(AllfoodItems[uniquecommonDisLiked[j]].name +" are the Unhealthy disliked")
-            console.log(AllfoodItems[uniquecommonDisLiked[j]].url +" are the  Unhealthy disliked")
-            console.log(AllfoodItems[uniquecommonDisLiked[j]].healthindex+" of  the Unhealthy disliked")
-            $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonDisLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonDisLiked[j]].name+'</span></span></a></li>');
-           
-        }
-        //	document.getElementById('matchedFood').innerHTML=AllfoodItems[uniquecommonDisLiked[j]].name;
-        }
+     if(uniquecommonDisLiked){
+        for(var j=0;j<uniquecommonDisLiked.length;j++){
+            //	AllfoodItems[uniquecommonDisLiked[j]].name;
+            if(AllfoodItems[uniquecommonDisLiked[j]].healthindex<50){
+                console.log(AllfoodItems[uniquecommonDisLiked[j]].name +" are the Unhealthy disliked")
+                console.log(AllfoodItems[uniquecommonDisLiked[j]].url +" are the  Unhealthy disliked")
+                console.log(AllfoodItems[uniquecommonDisLiked[j]].healthindex+" of  the Unhealthy disliked")
+                $("#ULlistId").append('<li class="ListElements"><a href=""><span class="tab"><img src="'+AllfoodItems[uniquecommonDisLiked[j]].url+'"><span class="foodNameOnimage">'+AllfoodItems[uniquecommonDisLiked[j]].name+'</span></span></a></li>');
+               
+            }
+            //	document.getElementById('matchedFood').innerHTML=AllfoodItems[uniquecommonDisLiked[j]].name;
+            }
+     }
+
         $(".CloseButton").css("display","block");
         CarouselSlide();
 }
 }
     
 }
-
-// logic for fooditemFetching ends here
-
-
 //logic for carousel starts here
 var CarouselSlide= function() {
     $('#calcButton').css('display', 'none');
