@@ -202,24 +202,27 @@ else  if(itemtype==UnhealthyDisLiked){
 }
 
 // logic for fooditemFetching ends here//logic for carousel starts here
+//logic for carousel starts here
 var CarouselSlide= function() {
     $('#calcButton').css('display', 'none');
     $('.ListElements').click(false);
     $("#container").css("display","none");
-  var interval;
-  interval = setInterval(function () {
+  var interval=1000;
+  /* interval no
+  interval = setInterval(function () {  
     moveRight();
-  }, 5000);
+  }, 1000);*/
   
   $('._slider').mouseover(function(){
     clearInterval(interval);
+    
   });
-  
+  /*  not required mouseleave as makes it fast
   $('._slider').mouseleave(function(){
     interval = setInterval(function () {
       moveRight();
-      }, 5000);
-  });
+      }, 1000);
+  });*/
   
   var slideCount = $('._slider ul li').length;
   var slideWidth = $('._slider ul li').width();
@@ -235,7 +238,7 @@ var CarouselSlide= function() {
     function moveLeft() {
         $('._slider ul').animate({
             left: + slideWidth
-        }, 800, function () {
+        }, interval, function () {
             $('._slider ul li:last-child').prependTo('._slider ul');
             $('._slider ul').css('left', '');
         });
@@ -244,7 +247,7 @@ var CarouselSlide= function() {
     function moveRight() {
         $('._slider ul').animate({
             left: - slideWidth
-        }, 800, function () {
+        }, interval, function () {
             $('._slider ul li:first-child').appendTo('._slider ul');
             $('._slider ul').css('left', '');
         });
@@ -259,12 +262,15 @@ var CarouselSlide= function() {
         moveRight();
         return false;
     });
-   
+   $('.CloseButton').click(function () {
+    clearInterval(interval);
+
+interval=0;
+
+
+   });
   
-}
-
-
-// logic for slider ends here
+}// logic for slider ends here
 
 var closeCarousel = function(){
     $(".ListElements").remove();  
