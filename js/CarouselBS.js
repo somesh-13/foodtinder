@@ -69,6 +69,8 @@ var semiCircleMenu = function(){
 semiCircleMenu();
 
 //LOgic for semicircle menu creation ends here
+//LOgic for semicircle menu creation ends here
+
 var foodItemsInfo = function( itemtype){ 
 if(($(".IconsText")[0].style.display=="block")){ 
     var AllFoodIds =[];
@@ -90,10 +92,12 @@ if(($(".IconsText")[0].style.display=="block")){
     }
     var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
   //  var dummyfoodItems=JSON.parse(sessionStorage.getItem("dummyFoodItems"));
-    
-    for (var i=0;i<AllfoodItems.length;i++){
-        AllFoodIds[i]=AllfoodItems[i].id;
+    if(AllfoodItems){
+        for (var i=0;i<AllfoodItems.length;i++){
+            AllFoodIds[i]=AllfoodItems[i].id;
+        }
     }
+ 
 
 
   if(itemtype==healthyLiked){
@@ -196,7 +200,8 @@ else  if(itemtype==UnhealthyDisLiked){
 }
     
 }
-//logic for carousel starts here
+
+// logic for fooditemFetching ends here//logic for carousel starts here
 var CarouselSlide= function() {
     $('#calcButton').css('display', 'none');
     $('.ListElements').click(false);
