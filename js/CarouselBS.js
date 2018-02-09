@@ -77,6 +77,12 @@ if(($(".IconsText")[0].style.display=="block")){
     $("#sliderID").css("display","block");
     var DislikedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodDisLikedArray"));
     var likedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodLikedArray"));
+        var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
+  //  var dummyfoodItems=JSON.parse(sessionStorage.getItem("dummyFoodItems"));
+    if(AllfoodItems){
+        for (var i=0;i<AllfoodItems.length;i++){
+            AllFoodIds[i]=AllfoodItems[i].id;
+        }
     if(DislikedFoodItemsIds  && likedFoodItemsIds){
         var likedFoodItemsIdsNumber=likedFoodItemsIds.map(Number);
         var DislikedFoodItemsIdsNumber=DislikedFoodItemsIds.map(Number);  
@@ -90,12 +96,7 @@ if(($(".IconsText")[0].style.display=="block")){
 
         var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
     }
-    var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
-  //  var dummyfoodItems=JSON.parse(sessionStorage.getItem("dummyFoodItems"));
-    if(AllfoodItems){
-        for (var i=0;i<AllfoodItems.length;i++){
-            AllFoodIds[i]=AllfoodItems[i].id;
-        }
+
     }
  
 
