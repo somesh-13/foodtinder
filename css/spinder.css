@@ -161,6 +161,7 @@ color: red;
     font-weight: 800;
     color: #000;
     z-index: 100000;
+    text-shadow: 3px 2px 5px #fff;
 }
   .iconsColor{
       background: red !important;
