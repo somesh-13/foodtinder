@@ -1,6 +1,6 @@
 
     var dummyFoodItems=[
-    {id:0,name:"You are viewing",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/space.jpg?alt=media&token=651ea283-ee18-4d13-8635-b8fc68553e41"
+    {id:0,name:"You are viewing",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/bino.jpg?alt=media&token=078b9fe0-9d9a-4fe1-b0a6-bdfaa8bf842f"
     ,healthindex:50,question:"You are viewing",matched:"false",description:"THis is dummyitem"},
     {id:1,name:"Healthy Liked Foods",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/pexels-photo-128402.jpeg?alt=media&token=8e107cd2-1663-484f-b86b-5526005d8eeb"
     ,healthindex:88,question:"YOu are viewing healthy liked food items",matched:"false",description:"CAkes contains a lot of sugar and will make you fat"},
