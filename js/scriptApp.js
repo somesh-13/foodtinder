@@ -1,7 +1,7 @@
    var app = angular.module("FoodEdu",["ui.router"])
 					.config(function($stateProvider,$urlMatcherFactoryProvider,$urlRouterProvider){
 						$urlMatcherFactoryProvider.caseInsensitive(true);
-						$urlRouterProvider.otherwise("/swipes");
+						$urlRouterProvider.otherwise("/demo");
 						$stateProvider
 						.state("swipes",{
                             url:"/swipes",
@@ -22,7 +22,13 @@
 								customData1:"Courses state custom data 1",
 								customData2:"Courses state custom data 2 "
 							}
-                        })
+						})
+						.state("demo",{
+							url:"/demo",
+						templateUrl:"demoPartial.html",
+						controller:"demoController",
+						controllerAs:"demoCtrl",
+							})
 					})
 
 					.controller("swipeController",function($scope,$timeout){
@@ -92,61 +98,10 @@
 						  });
 							})			
 					.controller("matchesController",function($scope,$state){
-/*
-							var AllFoodIds =[];
-							var likedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodLikedArray"));
-							var DislikedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodDisLikedArray"));
-							 var likedFoodItemsIdsNumber=likedFoodItemsIds.map(Number);
-							 var DislikedFoodItemsIdsNumber=DislikedFoodItemsIds.map(Number);
-							var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
-							for (var i=0;i<AllfoodItems.length;i++){
-								AllFoodIds[i]=AllfoodItems[i].id;
-							}
-						
-						
-						var commonLiked = $.grep(likedFoodItemsIdsNumber, function(element) {
-							return $.inArray(element, AllFoodIds ) !== -1;
-						});
-						var commonDisLiked = $.grep(DislikedFoodItemsIdsNumber, function(element) {
-							return $.inArray(element, AllFoodIds ) !== -1;
-						});
-						var uniquecommonLiked= Array.from(new Set(commonLiked));
-						var uniquecommonDisLiked= Array.from(new Set(commonDisLiked));
-					
-						
-						for(var j=0;j<uniquecommonLiked.length;j++){
-							AllfoodItems[uniquecommonLiked[j]].name;
-			
-						}
-						for(var j=0;j<uniquecommonDisLiked.length;j++){
-	
-							
-						//	document.getElementById('matchedFood').innerHTML=AllfoodItems[uniquecommonDisLiked[j]].name;
-						}
-		*/				
 						semiCircleMenu();
-					
-						/*	$scope.coursesdata1= $state.current.data.customData1;
-							$scope.coursesdata2= $state.current.data.customData2;
-							$scope.homedata1= $state.get("main").data.customData1;
-							$scope.homedata2= $state.get("main").data.customData2;*/
-				
 					})
 								
-				/*	.controller("studentsController",function(studentsList,$scope,$http,$rootScope,$log){
+					.controller("demoController",function($scope,$state){
+						
 
-							$scope.$on("$locationChangeStart",function(event,next,current){
-								$log.debug("Location change start fired");
-								$log.debug(event);
-								$log.debug(next);
-								$log.debug(current);
-							});
-							$scope.$on("$routeChangeStart",function(event,next,current){
-								$log.debug("Route change start fired");
-								$log.debug(event);
-								$log.debug(next);
-								$log.debug(current);
-							});
-		
-							$scope.students=studentsList;
-					}) */
+					})
