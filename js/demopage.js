@@ -10,7 +10,7 @@ var openNav =	function() {
 
 function onDemoLoad(){
     if(document.getElementsByClassName("demoPageClass")[0]){
-        document.getElementsByClassName("containerApp")[0].style="height:470px;overflow:auto;";
+        document.getElementsByClassName("containerApp")[0].style="height:100%;overflow:auto;";
         document.getElementsByTagName("body").style="overflow:scroll;"
     
     }
