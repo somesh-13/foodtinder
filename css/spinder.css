@@ -314,8 +314,12 @@ color: red;
     font-weight: 800;
 }
 .socialMedia {
-    margin: 90px auto 20px auto;
+    margin: 20px auto 20px auto;
     text-align: center;
+}
+.marginHeadingSocial{
+    margin: 80px auto 0px auto;
+    
 }
 .calculate{
     padding: 10px 65px;
