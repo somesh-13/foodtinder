@@ -18,7 +18,7 @@ function onDemoLoad(){
 }onDemoLoad();
     function scrollToADiv(){
 
-        $("a").on('click', function(event) {
+        $(".overlay-content a").on('click', function(event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
