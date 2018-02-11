@@ -102,6 +102,6 @@
 					})
 								
 					.controller("demoController",function($scope,$state){
-						
+						onDemoLoad();
 
 					})

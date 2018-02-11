@@ -253,7 +253,38 @@ color: red;
   /* *******************************************
    * END Slider
    * */
-   .CloseButton {
+   .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .CloseButton {
     padding: 10px 65px;
     border: 2px solid red;
     background: red;
@@ -281,6 +312,10 @@ color: red;
     padding: 10px 5px 10px 40px;
     font-size: 22px;
     font-weight: 800;
+}
+.socialMedia {
+    margin: 90px auto 20px auto;
+    text-align: center;
 }
 .calculate{
     padding: 10px 65px;
@@ -312,6 +347,12 @@ color: red;
     width: 100%;
     text-align: center;
     margin-top: 30px;
+}
+.textContentHomePage {
+    padding: 10px 10px 10px 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    text-align: left;
 }
 
 .overlay a {
