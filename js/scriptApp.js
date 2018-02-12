@@ -32,6 +32,7 @@
 					})
 
 					.controller("swipeController",function($scope,$timeout){
+						
 						$scope.$on('$viewContentLoaded', function(event) {
 							$timeout(function() {
 								$scope.message="swipe page";
@@ -93,12 +94,14 @@
 								//var AllfoodItemslength=fooditems.length;
 								ArrayGenerator(AllfoodItemslength);
 								tinderFunc(fooditems,AllfoodItemslength);
+				
 							
 							},0);
 						  });
 							})			
 					.controller("matchesController",function($scope,$state){
 						semiCircleMenu();
+						backgroundColorChange();
 					})
 								
 					.controller("demoController",function($scope,$state){

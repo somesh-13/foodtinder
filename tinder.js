@@ -127,4 +127,3 @@ var inc=1;
 		}			
 
 tinderFunc();
-			

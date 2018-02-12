@@ -313,3 +313,12 @@ else{
     alert("you are well aware about the food science and are on track of you health")
 }
 }
+
+var backgroundColorChange= function(){
+
+ if($(window).width()>767){
+if($('.containerApp')){
+    $('.containerApp').css("height", "570px");
+}
+ }    
+}
