@@ -22,10 +22,40 @@ var inc=1;
    return arr;
 
 }
+function preloadimages(arr){ 
+    var newimages=[], loadedimages=0
+    var postaction=function(){}
+    var arr=(typeof arr!="object")? [arr] : arr
+    function imageloadpost(){
+        loadedimages++
+        if (loadedimages==arr.length){
+            postaction(newimages) //call postaction and pass in newimages array as parameter
+        }
+    }
+    for (var i=0; i<arr.length; i++){
+        newimages[i]=new Image()
+        newimages[i].src=arr[i]
+        newimages[i].onload=function(){
+            imageloadpost()
+        }
+        newimages[i].onerror=function(){
+            imageloadpost()
+        }
+    }
+    return { //return blank object with done() method
+        done:function(f){
+            postaction=f || postaction //remember user defined callback functions to be called when images load
+        }
+    }
+}
+ 
+
 		var tinderFunc  =  function (fooditems,AllfoodItemslength) {
 			var namesFood = new Array(fooditems.length);
 			var foodId = new Array(fooditems.length);
 			var foodImageURls = new Array(fooditems.length);
+		
+
 			var foodquestion= new Array(fooditems.length);
 //			var namesFood,foodId,foodImageURls;
 			for (var i=0;i<fooditems.length;i++){
@@ -35,6 +65,12 @@ var inc=1;
 				foodquestion[i]=fooditems[i].question;
 
 			}
+			preloadimages(foodImageURls).done(function(images){
+				//call back codes, for example:
+				//alert(images.length) //alerts 3
+			
+				//alert(images[0].src+" "+images[0].width) //alerts '1.gif 220'
+			   })
 	
 			$("div#swipe_like").on( "click", function() {
 				swipeLike();
