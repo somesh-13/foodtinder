@@ -65,7 +65,12 @@ function preloadimages(arr){
 				foodquestion[i]=fooditems[i].question;
 
 			}
-
+			preloadimages(foodImageURls).done(function(images){
+				//call back codes, for example:
+				//alert(images.length) //alerts 3
+			
+				//alert(images[0].src+" "+images[0].width) //alerts '1.gif 220'
+			   })
 	
 			$("div#swipe_like").on( "click", function() {
 				swipeLike();
@@ -127,7 +132,7 @@ function preloadimages(arr){
 			function addNewProfile() {
 				//var randomid = arr[Math.floor(Math.random() * 10)];
 				var randomid = arr[inc-1];
-				
+			
 				if (inc==arr.length-1){ 
 					inc=0;
 				}
@@ -140,13 +145,6 @@ function preloadimages(arr){
 			//	var randomid=foodId[Math.floor(Math.random() * 8 )];
 				var names = namesFood[randomid];
 				document.getElementById('foodquestion').innerHTML=foodquestion[randomid];
-				
-				preloadimages(foodImageURls).done(function(images){
-					//call back codes, for example:
-					//alert(images.length) //alerts 3
-
-					//alert(images[0].src+" "+images[0].width) //alerts '1.gif 220'
-				   })
 				
 				//var photos = ['1', '2', '3'][Math.floor(Math.random() * 3)]
 				$("div.content").prepend('<div class="photo" id="photo" style="background-image:url('+foodImageURls[randomid]+')">'
