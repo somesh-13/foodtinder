@@ -1,12 +1,15 @@
 var openNav =	function() {
      document.getElementById("myNav").style.width = "100%";
+     document.getElementById("AboutMe").style.display = "none";
+     
     }
-     openNav();
+     
     
   function closeNavCLick () {
         document.getElementById("myNav").style.width = "0%";
+        document.getElementById("AboutMe").style.display = "block";
     }
-    closeNavCLick();
+   
 
 function onDemoLoad(){
     if(document.getElementsByClassName("demoPageClass")[0]){

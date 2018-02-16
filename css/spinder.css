@@ -62,7 +62,7 @@ body{
     font-size: 20px;
     text-transform: uppercase;
     padding: 4px;
-    margin: 0 2px;
+    margin: 0 13px;
 }
 .imageClass{
     max-width: 380px;
@@ -456,6 +456,10 @@ color: red;
         bottom: 2px;
         right: 120px;
     
+    }
+    .titleColor {
+        padding: 4px;
+        margin: 0 2px;
     }
     .relativeDiv{
         margin: 0 auto;
