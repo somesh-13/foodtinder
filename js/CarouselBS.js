@@ -302,18 +302,23 @@ var uniquecommonLiked= Array.from(new Set(commonLiked));
 console.log(uniquecommonLiked+" is array of items liked overall")
 var sum=0;
 for(var q=0;q<uniquecommonLiked.length;q++){
-    sum=sum+AllfoodItems[uniquecommonLiked[q]].healthindex;
+    sum=sum+Number(AllfoodItems[uniquecommonLiked[q]].healthindex);
+    
 }
 
 var average = sum/uniquecommonLiked.length;
-if(average<35){
+console.log(average+" is the average")
+if(average>0 && average<=35){
+    console.log("here between 0 to 30")
     alert("you eat a lot of junk food and is dangerous for your health")
 }
-else if(average<70){
-    alert("you eat a lot of carbs and you need to work hard to loose weight")
+else if(average>35 && average<=70){
+    console.log("here between  30 to 69")
+    alert("you eat a lot of carbs  and you need to work hard to loose weight")
 }
 
-else{
+else if (average>70){
+    console.log("here between  70 to 100")
     alert("you are well aware about the food science and are on track of you health")
 }
 
