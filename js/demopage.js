@@ -9,7 +9,16 @@ var openNav =	function() {
         document.getElementById("myNav").style.width = "0%";
         document.getElementById("AboutMe").style.display = "block";
     }
+    function openSnapcode () {
+        document.getElementById("snapDiv").style.width = "100%";
+       document.getElementById("AboutMe").style.display = "none";
+    }
+    function closeSnapcode () {
+        document.getElementById("snapDiv").style.width = "0%";
+        document.getElementById("AboutMe").style.display = "block";
+    }
    
+
 
 function onDemoLoad(){
     if(document.getElementsByClassName("demoPageClass")[0]){
