@@ -82,7 +82,19 @@
 									{id:20,name:"pulao",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/pulao.jpg?alt=media&token=5f776510-e9a0-480f-8257-3467b797d562"
 									,healthindex:24,question:"do you like eating Indian Pulao?",matched:"false",description:"Pulao has high carbs"},
 									{id:21,name:"Salads",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/salads.jpg?alt=media&token=27b278d8-bc70-4fed-b4ce-8b883d9fd3a1"
-									,healthindex:77,question:"do you like eating salads?",matched:"false",description:"salads are good for healthy"}									
+									,healthindex:77,question:"do you like eating salads?",matched:"false",description:"salads are good for healthy"},
+									{id:22,name:"Fries",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/fries.jpeg?alt=media&token=3eaa981b-90be-4e3e-999d-96b1162a0464"
+									,healthindex:23,question:"are you habitual of eating fries?",matched:"false",description:"fries has high carbs"},			
+									{id:23,name:"namkeen",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/namkeen.jpeg?alt=media&token=52abd20e-bcbf-4aa7-abb8-a760bc5fea75"
+									,healthindex:33,question:"are these your chakna :D and you binge eat it?",matched:"false",description:"namkeen has slightly high carbs"},						
+									{id:24,name:"Potato Chips",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/potato%20chips.jpeg?alt=media&token=333afd6d-754f-4fb6-888e-73ec0c6043a5"
+									,healthindex:26,question:"is it your go to option everyday as you get hungry?",matched:"false",description:"namkeen has slightly high carbs"},						
+									{id:25,name:"ChocoCOld Coffee",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/choco%20cold%20coffee.jpeg?alt=media&token=d7982f6c-c14d-470c-8a74-e8b97dd2eaa0"
+									,healthindex:26,question:"do you have this kind of coffee?",matched:"false",description:"it has sugar and high carbs"},
+									{id:26,name:"burger and fires",url:"https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/burger%20n%20fries.jpeg?alt=media&token=239c86e2-b79b-4944-b29c-caeb8336a7bf"
+									,healthindex:28,question:"do you enjoy this tasty meal frequently?",matched:"false",description:"it has high carbs"}						
+				
+				
 								];  
 								
 								sessionStorage.setItem("fooditemsList", JSON.stringify(fooditems));
