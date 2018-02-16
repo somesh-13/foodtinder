@@ -283,9 +283,13 @@ var closeCarousel = function(){
 
 var calculateNutrition = function(){
     $("#calcButton").css("display","block");
-    
-    var AllFoodIds =[];
     var likedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodLikedArray"));
+    var AllFoodIds =[];
+if(likedFoodItemsIds==null){
+    alert("you have not liked anything till now please do some swipes to calculate.")
+}
+
+    if(likedFoodItemsIds){
     var likedFoodItemsIdsNumber=likedFoodItemsIds.map(Number);
   var AllfoodItems=JSON.parse(sessionStorage.getItem("fooditemsList"));
     for (var i=0;i<AllfoodItems.length;i++){
@@ -312,6 +316,9 @@ else if(average<70){
 else{
     alert("you are well aware about the food science and are on track of you health")
 }
+
+    }
+    
 }
 
 var backgroundColorChange= function(){
