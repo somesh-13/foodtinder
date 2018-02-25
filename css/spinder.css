@@ -240,6 +240,7 @@ color: red;
     font-size: 2em;
     opacity: 0.8;
     cursor: pointer;
+    display:block;
   }
   ._slider_next:hover, ._slider_prev:hover {
     opacity: 1;
