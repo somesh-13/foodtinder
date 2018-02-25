@@ -254,12 +254,12 @@ var CarouselSlide= function() {
         });
     };
   
-    $('._slider_prev').click(function () {
+    $('._slider_prev').unbind('click').bind('click', function (e){
         moveLeft();
         return false;
     });
   
-    $('._slider_next').click(function () {
+    $('._slider_next').unbind('click').bind('click', function (e){
         moveRight();
         return false;
     });
