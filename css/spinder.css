@@ -412,6 +412,7 @@ color: red;
 }
 .imageDemoSize{
     max-width: 320px;
+    padding:0 50px;
 }
 .centerALignIMG{
     text-align: center;
