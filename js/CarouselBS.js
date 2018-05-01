@@ -283,6 +283,7 @@ var closeCarousel = function(){
 
 var calculateNutrition = function(){
     $("#calcButton").css("display","block");
+	$("#caluclateNav").css("height","100%");
     var likedFoodItemsIds=JSON.parse(sessionStorage.getItem("foodLikedArray"));
     var AllFoodIds =[];
 if(likedFoodItemsIds==null){
@@ -310,16 +311,22 @@ var average = sum/uniquecommonLiked.length;
 console.log(average+" is the average")
 if(average>0 && average<=35){
     console.log("here between 0 to 30")
-    alert("you eat a lot of junk food and is dangerous for your health")
+$(".calcText")[0].innerHTML = "you eat a lot of junk food and is dangerous for your health , leave each unhealthy food per week \
+first the worst like cakes then coldrinks then vegetarian junk food and increase your protien intake , consume 1gm per kg body weight protien eg 70gm protien for 70kgs";
+$(".card img")[0].src="https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/28.jpeg?alt=media&token=cc47d8d9-e79b-4f77-9479-3b7135f26225";
 }
 else if(average>35 && average<=70){
     console.log("here between  30 to 69")
-    alert("you eat a lot of carbs  and you need to work hard to loose weight")
+	$(".calcText")[0].innerHTML ="you are not in too much of a danger but still you need to improve your food habits , increase protien(1 gm per KG body weight) , reduce carbs and eat a lot of green veggies ";
+	$(".card img")[0].src="https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/27.jpeg?alt=media&token=06fc2a12-28ee-4b71-84f8-80c241e215d0";
+	    //alert("you eat a lot of carbs  and you need to work hard to loose weight")
 }
 
 else if (average>70){
     console.log("here between  70 to 100")
-    alert("you are well aware about the food science and are on track of you health")
+		$(".calcText")[0].innerHTML="you are well aware about the food science and are on track of you health";
+		$(".card img")[0].src="https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/salads.jpg?alt=media&token=27b278d8-bc70-4fed-b4ce-8b883d9fd3a1";
+    //alert("you are well aware about the food science and are on track of you health")
 }
 
     }
@@ -334,3 +341,6 @@ if($('.containerApp')){
 }
  }    
 }
+function closeNavCalc() {
+ $("#caluclateNav").css("height","0%");
+ }
