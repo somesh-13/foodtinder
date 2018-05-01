@@ -424,7 +424,7 @@ color: red;
     height: 0%;
     width: 100%;
     position: fixed;
-    z-index: 15;
+    z-index: 25;
     top: 0;
     left: 0;
     background-color: red;
@@ -456,7 +456,7 @@ color: red;
 
 .overlayOrange .closebtn {
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 45px;
     font-size: 60px;
 }
