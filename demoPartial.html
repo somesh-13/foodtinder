@@ -1,3 +1,34 @@
+<div id="myNavInput" class="overlay">
+
+  <div class="overlayPageLoad restrictForm">
+    
+    <label for="name">name</label>
+     <input type="text" placeholder="name" id="name" ng-model="name" style="color:#000;"/><br>
+     <label for="age" style="padding:20px 15px 20px 0;"/>age</label>
+    <input type="number" id="age"  placeholder="age" ng-model="age" style="color:#000;"/><br>
+    
+    <input type="radio" name="gender" ng-model="gender" value="male"/> Male<br>
+    <input type="radio" name="gender" ng-model="gender" value="female"/> Female<br>
+    <input type="radio" name="gender" ng-model="gender" value="other"/> Other<br>
+
+    <label for="profession" style="padding:10px 0 0 0;">profession</label>
+    <select name="profession" id="profession" ng-model="profession" style="color:#5d5555">
+        <option value="student">Student</option>
+        <option value="Housewife">Housewife</option>
+        <option value="Buisnessman">Buisnessman</option>
+        <option value="Working Professional">Working Professional</option>
+        <option value="model">model</option>
+        <option value="actor">actor</option>
+      </select>
+      <span ng-if=name>Your name is {{name}}</span><br> 
+      <span ng-if=age>Your age is {{age}}</span><br> 
+      <span ng-if=gender>Your gender is {{gender}}</span><br>
+      <span ng-if=profession>Your profession is {{profession}}</span>
+    <input type="button" value="submit"  onclick="submitClick()" class="submitButton"><br> 
+
+  </div>  
+
+</div>
 <div class="whiteback">
   <a class="calculate demoButtons bounce" id="AboutMe" onclick="openNav() " style="display:block">MENU</a>
 </div>
@@ -28,7 +59,7 @@
     </div>
   
   </div>
-  <div id="snapDiv" class="overlay">
+  <div id="snapDiv" class="overlay">  
     <div class="snapchatCode" style="max-width: 320px;margin: 0 auto;">
       <img src="https://firebasestorage.googleapis.com/v0/b/foodtinder-3543e.appspot.com/o/snapcode.JPG?alt=media&token=2a634063-3453-43cb-bc48-75e3813dbcd7" style="width:100%;margin: 50px 0 0 0;">
     </div>

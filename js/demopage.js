@@ -3,12 +3,12 @@ var openNav =	function() {
      document.getElementById("AboutMe").style.display = "none";
      
     }
-     
+
     
   function closeNavCLick () {
         document.getElementById("myNav").style.width = "0%";
         document.getElementById("AboutMe").style.display = "block";
-    }
+    } 
     function openSnapcode () {
         document.getElementById("snapDiv").style.width = "100%";
        document.getElementById("AboutMe").style.display = "none";
