@@ -21,15 +21,20 @@ var openNav =	function() {
 
 
 function onDemoLoad(){
-    if(document.getElementsByClassName("demoPageClass")[0]){
-        document.getElementsByClassName("containerApp")[0].style="height:100%;overflow:auto;";
-        document.getElementsByTagName("body").style="overflow:scroll;"
-        var  heightWindow=$(window).height();
-        heightWindow=heightWindow-100;
-        //document.getElementsByClassName("demoButtons")[0].style="margin-top:"+heightWindow+"px !important;";
-    }
     
-}onDemoLoad();
+        if(document.getElementsByClassName("demoPageClass")[0]){
+            document.getElementsByClassName("containerApp")[0].style="height:100%;overflow:auto;";
+            document.getElementsByTagName("body").style="overflow:scroll;"
+            var  heightWindow=$(window).height();
+            heightWindow=heightWindow-100;
+            //document.getElementsByClassName("demoButtons")[0].style="margin-top:"+heightWindow+"px !important;";
+        }
+        if(sessionStorage.getItem("firebaseDataAck")=="true"){
+            $('#myNavInput')[0].style.width="0";
+        }
+    }
+ 
+onDemoLoad();
     function scrollToADiv(){
 
         $(".overlay-content a").on('click', function(event) {

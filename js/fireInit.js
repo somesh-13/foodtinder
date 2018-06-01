@@ -38,4 +38,5 @@ var data = {
 
 ref.push(data);
 document.getElementById("myNavInput").style.width = "0%";
+sessionStorage.setItem("firebaseDataAck", "true");
 } 
