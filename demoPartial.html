@@ -11,7 +11,7 @@
     <input type="radio" name="gender" ng-model="gender" value="female"/> Female<br>
     <input type="radio" name="gender" ng-model="gender" value="other"/> Other<br>
 
-    <label for="profession" style="padding:10px 0 0 0;">profession</label>
+    <label for="profession" style="padding:10px 0 10px 0;">profession</label>
     <select name="profession" id="profession" ng-model="profession" style="color:#5d5555">
         <option value="student">Student</option>
         <option value="Housewife">Housewife</option>
@@ -20,10 +20,10 @@
         <option value="model">model</option>
         <option value="actor">actor</option>
       </select>
-      <span ng-if=name>Your name is {{name}}</span><br> 
-      <span ng-if=age>Your age is {{age}}</span><br> 
-      <span ng-if=gender>Your gender is {{gender}}</span><br>
-      <span ng-if=profession>Your profession is {{profession}}</span>
+      <span ng-if=name ng-class="spacingBetweenLines">Your name is {{name}}</span><br> 
+      <span ng-if=age ng-class="spacingBetweenLines">Your age is {{age}}</span><br> 
+      <span ng-if=gender ng-class="spacingBetweenLines">Your gender is {{gender}}</span><br>
+      <span ng-if=profession ng-class="spacingBetweenLines">Your profession is {{profession}}</span>
     <input type="button" value="submit"  onclick="submitClick()" class="submitButton"><br> 
 
   </div>  

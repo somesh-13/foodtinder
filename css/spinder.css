@@ -351,6 +351,9 @@ color: red;
     position: absolute;
     display: none; 
 }
+.spacingBetweenLines {
+    margin: 5px 0 5px 0 !important;
+}
 .overlay {
     height: 100%;
     width: 0;
