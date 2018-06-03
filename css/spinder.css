@@ -537,6 +537,9 @@ margin-top: 14px;
     font-weight: 800;
     z-index: 15;
 }
+option{
+    display:block;
+}
 @media only screen and (min-width:320px) and (max-width:767px) {
     .swipesPagealign {
         padding: 0 0 0 15px;
