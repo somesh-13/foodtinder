@@ -68,7 +68,7 @@ function preloadimages(arr){
 			preloadimages(foodImageURls).done(function(images){
 				//call back codes, for example:
 				//alert(images.length) //alerts 3
-			
+				
 				//alert(images[0].src+" "+images[0].width) //alerts '1.gif 220'
 			   })
 	
