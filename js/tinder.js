@@ -108,7 +108,7 @@ function preloadimages(arr){
 			
 
 					var swipe = new TimelineMax({repeat:0, yoyo:false, repeatDelay:0, onComplete:remove, onCompleteParams:[$photo]});
-					swipe.staggerTo($photo, 0.8, {bezier:[{left:"+=400", top:"+=300", rotation:"60"}], ease:Power1.easeInOut});
+					swipe.staggerTo($photo, 1.2, {bezier:[{left:"+=400", top:"+=300", rotation:"60"}], ease:Power1.easeInOut});
 						
 					addNewProfile();
 			}
@@ -120,7 +120,7 @@ function preloadimages(arr){
 					dislikedFoodItemsstack.push(foodDisLiked);
 					sessionStorage.setItem("foodDisLikedArray", JSON.stringify(dislikedFoodItemsstack));
 					var swipe = new TimelineMax({repeat:0, yoyo:false, repeatDelay:0, onComplete:remove, onCompleteParams:[$photo]});
-					swipe.staggerTo($photo, 0.8, {bezier:[{left:"+=-350", top:"+=300", rotation:"-60"}], ease:Power1.easeInOut});
+					swipe.staggerTo($photo, 1.2, {bezier:[{left:"+=-350", top:"+=300", rotation:"-60"}], ease:Power1.easeInOut});
 		
 					addNewProfile();
 			}

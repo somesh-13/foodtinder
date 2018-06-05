@@ -133,7 +133,9 @@ color: red;
   #container {
     position: absolute;
     margin: auto;
-    top: 420px; left: 0; right: 0;
+    top: 29%;
+     left: 0;
+     right: 0;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -602,4 +604,7 @@ option{
     .footer{
         padding-left: 50px;
     }
+    #container{
+        top:87%;
+        }
 }
